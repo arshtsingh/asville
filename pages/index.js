@@ -1,39 +1,25 @@
 import Link from "next/link"
-import React from "react"
 import Prismic from "prismic-javascript"
 import { RichText, Date } from "prismic-reactjs"
 import { client } from "../prismic-configuration"
+import "tailwindcss/tailwind.css"
 
 export default function Home(props) {
   return (
     <div>
-      <img src={props.home.data.image.url} alt="avatar image" height="140px" />
-      <h1>{RichText.asText(props.home.data.headline)}</h1>
-      <p>{RichText.asText(props.home.data.description)}</p>
-      <ul>
-        {props.posts.results.map((post) => (
-          <li key={post.uid}>
-            <Link href="posts/[id]" as={`/posts/${post.uid}`}>
-              <a>{RichText.render(post.data.title)} </a>
-            </Link>
-           </li>
-         ))}
+      <h1 class="">arsh singh</h1>
+      <ul class="text-indigo-800 inline-flex space-x-4">
+        <li>
+          <Link href="/about">
+            <a>about</a>
+          </Link>
+          </li>
+          <li>
+          <Link href="/thoughts">
+            <a>thoughts</a>
+          </Link>
+        </li>
        </ul>
     </div>
   )
 }
-
-export async function getStaticProps() {
-  const home = await client.getSingle("blog_home")
-  const posts = await client.query(
-    Prismic.Predicates.at("document.type", "posts"),
-    { orderings: "[my.post.date desc]" }
-  )
-  return {
-    props: {
-      home,
-      posts,
-    },
-  }
-}
-
