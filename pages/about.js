@@ -6,9 +6,32 @@ import { client } from "../prismic-configuration"
 function About(props) {
   return (
     <>
-      <img src={props.home.data.image.url} alt="avatar image" height="140px" />
-      <h1>{RichText.asText(props.home.data.headline)}</h1>
-      <p>{RichText.asText(props.home.data.description)}</p>
+      <ul class="text-l text-indigo-800 inline-flex space-x-6">
+        <li>
+          <Link href="/">
+            <a>home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/about">
+            <a>about</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/thoughts">
+            <a>musings</a>
+          </Link>
+        </li>
+      </ul>
+      <div class="flex justify-center h-screen">
+        <div>
+          <h1 class="text-3xl">me</h1>
+          <p class="italic">pronoun</p>
+          <p>used by a speaker to refer to himself or herself as the object of a verb or preposition</p>
+          <p>----------------------------------------------------------------------</p>
+          <p>{RichText.asText(props.home.data.description)}</p>
+        </div>
+      </div>
     </>
   )
 }

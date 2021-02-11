@@ -7,15 +7,42 @@ import "tailwindcss/tailwind.css"
 function Thoughts(props) {
   return (
     <>
-      <ul>
-        {props.posts.results.map((post) => (
-          <li key={post.uid}>
-            <Link href="thoughts/[id]" as={`/thoughts/${post.uid}`}>
-              <a>{RichText.render(post.data.title)} </a>
-            </Link>
-           </li>
-         ))}
+      <ul class="text-l text-indigo-800 inline-flex space-x-6">
+        <li>
+          <Link href="/">
+            <a>home</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/about">
+            <a>about</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/thoughts">
+            <a>musings</a>
+          </Link>
+        </li>
       </ul>
+      <div class="flex justify-center h-screen">
+        <div>
+          <h1 class="text-3xl">muse</h1>
+          <p class="italic">noun</p>
+          <p>a state of deep thought or dreamy abstraction</p>
+          <p>----------------------------------------------------------------------</p>
+          <ul>
+            <div class="underline text-blue-500">
+              {props.posts.results.map((post) => (
+                <li key={post.uid}>
+                  <Link href="thoughts/[id]" as={`/thoughts/${post.uid}`}>
+                    <a>{RichText.render(post.data.title)} </a>
+                  </Link>
+                 </li>
+               ))}
+             </div>
+          </ul>
+        </div>
+      </div>
     </>
   )
 }
