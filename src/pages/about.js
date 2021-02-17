@@ -12,7 +12,7 @@ function About(props) {
         <div className='fixed'>
           <SiteMap />
         </div>
-        <div className='col-start-2 col-span-4 p-1'>
+        <div className='col-start-2 col-span-4 p-5'>
           <div>
             <h1 className="text-9xl">me</h1>
             <p className="italic">pronoun</p>
@@ -33,7 +33,7 @@ function About(props) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const about = await client.getSingle("about")
   return {
     props: {
