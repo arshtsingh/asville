@@ -7,7 +7,7 @@ import { client } from '../../../prismic-configuration'
 function Post({ post }) {
   return (
     <div>
-    <Link href="/">
+    <Link href="/musings">
       <a>Back to blog list</a>
     </Link>
     <header> {RichText.render(post.data.title)} </ header>
