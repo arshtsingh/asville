@@ -1,25 +1,18 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import SiteMap from '../components/SiteMap/'
 import Prismic from "prismic-javascript"
 import { RichText, Date } from "prismic-reactjs"
 import { client } from "../../prismic-configuration"
 
-export async function getServerSideProps() {
-  const posts = await client.query(
-    Prismic.Predicates.at('document.type', 'posts'),
-    { orderings: '[my.posts.date desc]' }
-  )
-
-  return { props: { posts } }
-}
-
 function Musings(props) {
+  console.log(props)
   return (
     <>
       <ul>
-        {posts.results.map((post) => (
+        {props.posts.results.map((post) => (
           <li key={post.uid}>
-            <Link href="posts/[id]" as={`/posts/${post.uid}`}>
+            <Link href="musings/[id]" as={`/musings/${post.uid}`}>
               <a>{RichText.render(post.data.title)} </a>
             </Link>
           </li>
@@ -27,6 +20,20 @@ function Musings(props) {
       </ul>
     </>
   )
+}
+
+export default Musings
+
+export async function getStaticProps() {
+  const posts = await client.query(
+    Prismic.Predicates.at('document.type', 'posts'),
+    { orderings: '[my.posts.date desc]' }
+  )
+  return {
+    props: {
+      posts,
+    },
+  }
 }
 
 // function Musings(props) {
@@ -62,4 +69,3 @@ function Musings(props) {
 //   )
 // }
 
-export default Musings

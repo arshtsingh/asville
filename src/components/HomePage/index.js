@@ -14,23 +14,18 @@ export default function HomePage() {
               </div>
             </div>
             <div class="text-center pt-12 pb-12">
-              <Link href='/'>
-                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-indigo-800 hover:text-white '>
-                  home
-                </a>
-              </Link>
               <Link href='/about'>
-                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-indigo-800 hover:text-white'>
+                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-indigo-500 hover:text-white'>
                   about
                 </a>
               </Link>
               <Link href='/musings'>
-                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-indigo-800 hover:text-white'>
+                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-green-500 hover:text-white'>
                   musings
                 </a>
               </Link>
               <Link href='https://github.com/arshtsingh'>
-                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-indigo-800 hover:text-white'>
+                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-red-500 hover:text-white'>
                   github
                 </a>
               </Link>
