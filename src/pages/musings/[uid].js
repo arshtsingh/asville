@@ -6,14 +6,21 @@ import { client } from '../../../prismic-configuration'
 
 function Post({ post }) {
   return (
-    <div>
-    <Link href="/musings">
-      <a>Back to blog list</a>
-    </Link>
-    <header> {RichText.render(post.data.title)} </ header>
-    <body> {RichText.render(post.data.post_body)} </ body>
-  </div>
- )
+    <section class="text-gray-600 body-font">
+      <div class="container px-5 py-5 mx-auto">
+        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto">
+          <Link href="/musings">
+            <a>Back to blog list</a>
+          </Link>
+          <br />
+          <header class="leading-relaxed text-lg">
+            {RichText.render(post.data.title)}
+          </ header>
+          <body> {RichText.render(post.data.post_body)} </ body>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Post
