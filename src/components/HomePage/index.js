@@ -92,6 +92,7 @@ export default function HomePage() {
             <p className="text-justify-sm font-serif font-thin">
               Consciousness notes that dont merit a longer write up.
             </p>
+            <br />
           </div>
           <div className="flex-grow">
             <img className="object-cover w-full" src="https://images-na.ssl-images-amazon.com/images/I/611ZUGA3sTL._AC_SL1024_.jpg" alt="longhorn" />
