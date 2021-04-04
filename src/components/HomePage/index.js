@@ -41,8 +41,8 @@ export default function HomePage() {
             </ul>
           </nav>
         </div>
-        <div className="grid grid-cols-6 pl-8 pt-6 pr-8">
-          <div className="text-white">
+        <div className="flex flex-col md:flex-row pl-8 pt-6 pr-8 mb-8">
+          <div className="flex-1 text-white mr-8">
             <h1 className="uppercase text-xs">
               <a href="/about">About</a>
             </h1>
@@ -93,8 +93,8 @@ export default function HomePage() {
               Consciousness notes that dont merit a longer write up.
             </p>
           </div>
-          <div className="col-start-2 col-end-7 bg-yellow-300">
-            <img className="object-center" src="https://images-na.ssl-images-amazon.com/images/I/611ZUGA3sTL._AC_SL1024_.jpg" alt="longhorn" />
+          <div className="flex-grow">
+            <img className="object-cover w-full" src="https://images-na.ssl-images-amazon.com/images/I/611ZUGA3sTL._AC_SL1024_.jpg" alt="longhorn" />
           </div>
         </div>
       </div>
