@@ -1,35 +1,100 @@
 import Link from 'next/link'
+
+
 export default function HomePage() {
   return (
     <>
-      <div className="w-full flex flex-wrap bg-black">
-        <div class="w-full flex flex-col">
-          <div class="flex flex-col items-center justify-center h-screen my-auto ">
-            <div class="flex flex-row">
-              <p class="text-center text-4xl p-1 text-white">
-                arshville
-              </p>
-              <div className="inline-flex items-center p-1">
-                <a className="bg-black text-white font-bold text-xl hover:bg-white hover:text-black p-1">:D</a>
-              </div>
-            </div>
-            <div class="text-center pt-12 pb-12">
-              <Link href='/about'>
-                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-indigo-500 hover:text-white'>
-                  about
+      <div className="h-full min-h-screen bg-black w-full flex flex-wrap grid">
+        <div className="">
+          <nav className="p-4">
+            <ul className="flex">
+              <li className="mr-2">
+                <a className="uppercase text-xs text-white hover:underline" href="/" title="Home">
+                  △
                 </a>
-              </Link>
-              <Link href='/musings'>
-                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-green-500 hover:text-white'>
-                  musings
+              </li>
+              <li className="mr-2">
+                <a className="uppercase font-semibold text-xs text-white hover:underline" href="/musings" title="Longform articles">
+                  Musings
                 </a>
-              </Link>
-              <Link href='https://github.com/arshtsingh'>
-                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 font-bold items-center justify-center text-white hover:bg-red-500 hover:text-white'>
-                  github
+              </li>
+              <li className="mr-2">
+                <a className="uppercase font-semibold text-xs text-white hover:underline" href="/musings" title="Longform articles">
+                  Projects
                 </a>
-              </Link>
-            </div>
+              </li>
+              <li className="mr-2">
+                <a className="uppercase font-semibold text-xs text-white hover:underline" href="/fragments" title="Fragments (short articles)">
+                  Fragments
+                </a>
+              </li>
+              <li className="mr-2">
+                <a className="uppercase font-semibold text-xs text-white hover:underline" href="/photos" title="Photography">
+                  Photos
+                </a>
+              </li>
+              <li className="mr-2">
+                <a className="uppercase font-semibold text-xs text-white hover:underline" href="/about" title="About me &amp; this site">
+                  About
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className="grid grid-cols-6 pl-8 pt-6 pr-8">
+          <div className="text-white">
+            <h1 className="uppercase text-xs">
+              <a href="/about">About</a>
+            </h1>
+            <br />
+            <p className="text-justify-sm font-serif font-thin">
+              I'm <a href="https://twitter.com/__arshville__" rel="me">@arsh</a>, an occasional writer and engineer.
+            </p>
+            <br />
+            <p className="text-justify-sm font-serif font-thin">
+              My hobbies are vast and interests follow suit, I created this site to document whatever I stumbled along and want to
+              share with a broader audience.
+            </p>
+            <br />
+            <hr/>
+            <br />
+            <h1 className="uppercase text-xs">
+              <a href="/musings">Musings</a>
+            </h1>
+            <br />
+            <p className="text-justify-sm font-serif font-thin">
+              This section is dedicated to ideas, thoughts or understandings that I have dwelled enough to create a write up. Occasionally
+              I will add short stories and other creative writing exersizes.
+            </p>
+            <br />
+            <hr/>
+            <br />
+            <h1 className="uppercase text-xs">
+              <a href="/projects">Projects</a>
+            </h1>
+            <br />
+            <p className="text-justify-sm font-serif font-thin">
+              A place where some of the projects I touch end up at. Some of these may be a work in progress while others will be marked as
+              archived, there is a rare chance of encountering something marked as completed. Most of these projects are also things that
+              I wanted to explore or learn about, there is no clear ending but the important part is the journey.
+              <br />
+              <br />
+              This section is under
+              construction, and will be as long as you can read this message.
+            </p>
+            <br />
+            <hr/>
+            <br />
+            <h1 className="uppercase text-xs">
+              <a href="/fragments">Fragments</a>
+            </h1>
+            <br />
+            <p className="text-justify-sm font-serif font-thin">
+              Consciousness notes that dont merit a longer write up.
+            </p>
+          </div>
+          <div className="col-start-2 col-end-7 bg-yellow-300">
+            <img className="object-center" src="https://images-na.ssl-images-amazon.com/images/I/611ZUGA3sTL._AC_SL1024_.jpg" alt="longhorn" />
           </div>
         </div>
       </div>
