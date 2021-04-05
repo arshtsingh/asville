@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="">
       <Head>
-        <title>arshville</title>
+        <title>arshy.org</title>
         <link rel='icon' href='../../public/favicon.ico' />
       </Head>
       <div className="flex flex-wrap items-center">

@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function HomePage() {
   return (
     <>
-      <div className="h-full min-h-screen bg-black w-full flex flex-wrap grid">
+      <div className="h-full min-h-screen bg-black w-full flex flex-wrap">
         <div className="">
           <nav className="p-4">
             <ul className="flex">
@@ -41,14 +41,14 @@ export default function HomePage() {
             </ul>
           </nav>
         </div>
-        <div className="flex flex-col md:flex-row pl-8 pt-6 pr-8 mb-8">
-          <div className="flex-1 text-white mr-8">
+        <div className="flex flex-col md:flex-row pl-8 pt-6 pr-8 mb-10">
+          <div className="flex-1 text-white mr-12">
             <h1 className="uppercase text-xs">
               <a href="/about">About</a>
             </h1>
             <br />
             <p className="text-justify-sm font-serif font-thin">
-              I'm <a href="https://twitter.com/__arshville__" rel="me">@arsh</a>, an occasional writer and engineer.
+              I'm <a href="https://twitter.com/__arshville__" rel="me">@arsh</a>, an engineer who Occasionally writes and paints.al writer and engineer.
             </p>
             <br />
             <p className="text-justify-sm font-serif font-thin">
